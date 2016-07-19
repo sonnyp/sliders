@@ -138,15 +138,18 @@
           canvas.height = img.height;
           const ctx = canvas.getContext('2d');
           ctx.drawImage(img, 0, 0, img.width, img.height);
-          console.log('image')
-          canvas.toBlob(blob => {
-            console.log('blob')
-            img.addEventListener('load', function () {
-              window.URL.revokeObjectURL(blob)
-            })
-            img.src = window.URL.createObjectURL(blob)
-            resolve()
-          }, 'image/png')
+
+          // works in Chrome and Firefox
+          img.src = canvas.toDataURL('image/png')
+          resolve()
+          // works in Firefox but not Chrome
+          // canvas.toBlob(blob => {
+          //   img.addEventListener('load', function () {
+          //     window.URL.revokeObjectURL(blob)
+          //   })
+          //   img.src = window.URL.createObjectURL(blob)
+          //   resolve()
+          // }, 'image/png')
         })
       })
     }))
