@@ -1,0 +1,49 @@
+#thumbnails {
+  border: solid 1px black;
+  height: 100%;
+  width: 230px;
+  display: inline-block;
+  float: left;
+  margin: 0;
+  padding: 0;
+  overflow-x: auto;
+}
+#thumbnails > li {
+  list-style-type: none;
+  margin-left: 10px;
+  width: 200px;
+  height: 200px;
+  border: solid 1px black;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+#preview {
+  cursor: pointer;
+}
+
+#content {
+  margin-left: 10px;
+  display: inline-block;
+  overflow: none;
+}
+#editor {
+  border: solid 1px black;
+  height: 600px;
+  width: 600px;
+}
+
+#thumbnails > li * {
+  width: inherit;
+  height: inherit;
+}
+
+
+#newFrame div {
+  font-size: 170px;
+  text-align: center;
+}
+
+.thumbnail.active {
+  border: solid 2px black !important;
+}
