@@ -1,17 +1,8 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-<!--
-    <script type="text/javascript" src="Date.getRelative.js"></script>
--->
-<!--
-    <script src="aloha/lib/aloha.js" data-aloha-plugins="common/format,common/list,common/table,common/undo,common/image,common/align"></script>
--->
-    <script type="text/javascript" src="content.js"></script>
-    <script type="text/javascript" src="editor.js"></script>
-<!--
-    <link rel="stylesheet" href="aloha/css/aloha.css" id="aloha-style-include" type="text/css" />
--->
+    <meta charset="utf-8"/>
+    <title>sliders</title>
     <link rel="stylesheet" href="editor.css" type="text/css"/>
   </head>
   <body>
@@ -21,8 +12,12 @@
       </li>
 		</ul>
 		<div id="content">
-      <button id="preview" onclick="test();">Preview</button>
-      <div id="editor" contenteditable="true"/>
+      <div id="editor" style="text-align: center; font-size: 2em;" contenteditable="true"></div>
+    </div>
+    <div id="sidebar">
+      <button id="preview">Preview</button>
+      <button id="fullscreen">Fullscreen</button>
     </div>
   </body>
+  <script type="text/javascript" src="editor.js"></script>
 </html>

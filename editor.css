@@ -1,16 +1,34 @@
-#thumbnails {
-  border: solid 1px black;
+html, body {
+  width: 100%;
   height: 100%;
+}
+
+  /* Firefox defaults to black on fullscreen */
+body, body > *, #editor {
+  background-color: white;
+}
+
+body {
+  display: flex;
+  margin: 0;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+#thumbnails {
   width: 230px;
-  display: inline-block;
-  float: left;
   margin: 0;
   padding: 0;
-  overflow-x: auto;
+  overflow-y: auto;
+  border-right: solid 1px black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 }
+
 #thumbnails > li {
   list-style-type: none;
-  margin-left: 10px;
   width: 200px;
   height: 200px;
   border: solid 1px black;
@@ -22,22 +40,29 @@
   cursor: pointer;
 }
 
-#content {
-  margin-left: 10px;
-  display: inline-block;
-  overflow: none;
+#sidebar {
+  width: 230px;
+  border-left: solid 1px black;
 }
+
+#content {
+  flex: 1;
+  display:  flex;
+  align-items: center;
+  justify-content: center;
+}
+
 #editor {
-  border: solid 1px black;
-  height: 600px;
+  overflow: hidden;
   width: 600px;
+  height: 600px;
+  border: solid 1px black;
 }
 
 #thumbnails > li * {
   width: inherit;
   height: inherit;
 }
-
 
 #newFrame div {
   font-size: 170px;
